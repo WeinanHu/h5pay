@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "WebViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    WebViewController *vc = [WebViewController new];
+    self.window.rootViewController = vc;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

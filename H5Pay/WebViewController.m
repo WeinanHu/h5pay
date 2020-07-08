@@ -20,7 +20,7 @@
     self.navigationController.navigationBar.hidden = NO;
     // 此处加载的是本地HTML文件
     [self.view addSubview:self.wkWebView];
-    NSURL *url = [NSURL URLWithString:@"http://51hall.natapp1.cc"];
+    NSURL *url = [NSURL URLWithString:@"http://51hall.natapp1.cc/mobile/html-selectNumber/fillInformation.html?siteCode=7d106cd0235bd777138e75e07e1ab593&flag=0&payFlag=1&amount=0.01&backUrl=http://www.baidu.com&name=%E6%9C%AC%E7%A7%91%E7%94%9F01&cerId=006FF52E7EE8305734A34D469C70FBACBA3BB7A315427603&mobileno=74D5C5972EAF5875BDAA2515A5190197&province=%E6%B9%96%E5%8D%97%E7%9C%81&city=%E7%9B%8A%E9%98%B3%E5%B8%82&county=%E8%B5%AB%E5%B1%B1%E5%8C%BA&detailedAddress=%E7%A9%BA"];
     [self forbidCssPress];
     [self.wkWebView loadRequest:[NSURLRequest requestWithURL:url]];
     
