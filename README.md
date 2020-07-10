@@ -39,14 +39,10 @@
         NSURLRequest *request = navigationAction.request;
         NSMutableURLRequest *newRequest = [[NSMutableURLRequest alloc] init];
         
-#pragma mark 1：改header,添加Referer
+#pragma mark ：改header,添加Referer
         newRequest.allHTTPHeaderFields = request.allHTTPHeaderFields;
         [newRequest setValue:@"xxx.51hall.natapp1.cc://" forHTTPHeaderField: @"Referer"];
         newRequest.URL = request.URL;
-   
-#pragma mark 2：拼redirect_url
-        NSString *urlStr = [NSString stringWithFormat:@"%@&redirect_url=xxx.51hall.natapp1.cc://", [request.URL absoluteString]];
-        newRequest.URL = [NSURL URLWithString:urlStr];
         
         [webView loadRequest:newRequest];
         self.load = YES;
@@ -71,14 +67,6 @@
 
 ```objc
 [newRequest setValue:@"xxx.51hall.natapp1.cc://" forHTTPHeaderField: @"Referer"];
-```
-
-中的 xxx.51hall.natapp1.cc 换成在第2步中设置的URL Scheme;
-
-同样将
-
-```objc
-NSString *urlStr = [NSString stringWithFormat:@"%@&redirect_url=xxx.51hall.natapp1.cc://", [request.URL absoluteString]];
 ```
 
 中的 xxx.51hall.natapp1.cc 换成在第2步中设置的URL Scheme;
