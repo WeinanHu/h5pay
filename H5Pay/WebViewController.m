@@ -104,8 +104,8 @@
         newRequest.URL = request.URL;
    
 #pragma mark 2：拼redirect_url
-        NSString *urlStr = [NSString stringWithFormat:@"%@&redirect_url=xxx.51hall.natapp1.cc://", [request.URL absoluteString]];
-        newRequest.URL = [NSURL URLWithString:urlStr];
+//        NSString *urlStr = [NSString stringWithFormat:@"%@&redirect_url=xxx.51hall.natapp1.cc://", [request.URL absoluteString]];
+//        newRequest.URL = [NSURL URLWithString:urlStr];
         
         [webView loadRequest:newRequest];
         self.load = YES;
